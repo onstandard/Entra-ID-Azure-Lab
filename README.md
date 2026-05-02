@@ -37,7 +37,7 @@ Azure-based Microsoft Entra ID lab covering cloud user and group management, dir
 
 Microsoft Entra ID is Microsoft's cloud-based identity and access management service used to manage users, groups, and access to resources.
 
-- Microsoft Entra ID was accessed through the Azure Portal to begin cloud identity management.
+- The architecture below illustrates how the Azure Virtual Machine, Microsoft Entra ID, Microsoft 365 Admin Center, and Active Directory Domain Services interact within this lab environment.
 
 ![Architecture Diagram](images/architecture-diagram.png)
 
