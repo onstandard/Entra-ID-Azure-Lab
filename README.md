@@ -11,9 +11,8 @@ Azure-based Microsoft Entra ID lab covering cloud user and group management, dir
 3. [Creating Groups and Adding Members](#creating-groups-and-adding-members)
 4. [Assigning Directory Roles](#assigning-directory-roles)
 5. [Multi-Factor Authentication](#multi-factor-authentication)
-6. [Self-Service Password Reset](#self-service-password-reset)
-7. [Conditional Access Policies](#conditional-access-policies)
-8. [Microsoft 365 Admin Center](#microsoft-365-admin-center)
+6. [Conditional Access Policies](#conditional-access-policies)
+7. [Microsoft 365 Admin Center](#microsoft-365-admin-center)
 
 ---
 
@@ -84,16 +83,6 @@ MFA adds a second layer of verification beyond a password, reducing the risk of 
 - Multi-Factor Authentication was enabled for test users in Microsoft Entra ID to simulate enforcing MFA across an organization.
 
 ![MFA](images/entra-mfa.png)
-
----
-
-## Self-Service Password Reset
-
-SSPR allows users to reset their own passwords without contacting the help desk, reducing ticket volume and improving productivity.
-
-- Self-Service Password Reset was configured in Microsoft Entra ID to allow users to reset their own passwords using verified authentication methods.
-
-![SSPR](images/entra-sspr.png)
 
 ---
 
