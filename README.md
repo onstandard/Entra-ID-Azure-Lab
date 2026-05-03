@@ -1,6 +1,6 @@
 # Entra ID Azure Lab
 
-Azure-based Microsoft Entra ID lab covering cloud user and group management, directory role assignment, conditional access policies, multi-factor authentication, self-service password reset, and Microsoft 365 Admin Center administration.
+Azure-based Microsoft Entra ID lab covering cloud user and group management, bulk user creation, directory role assignment, multi-factor authentication, password reset, session management, and user lifecycle management.
 
 ---
 
@@ -8,11 +8,13 @@ Azure-based Microsoft Entra ID lab covering cloud user and group management, dir
 
 1. [Entra ID Overview](#entra-id-overview)
 2. [Creating Users](#creating-users)
-3. [Creating Groups and Adding Members](#creating-groups-and-adding-members)
-4. [Assigning Directory Roles](#assigning-directory-roles)
-5. [Multi-Factor Authentication](#multi-factor-authentication)
-6. [Conditional Access Policies](#conditional-access-policies)
-7. [Microsoft 365 Admin Center](#microsoft-365-admin-center)
+3. [Bulk User Creation](#bulk-user-creation)
+4. [Creating Groups and Adding Members](#creating-groups-and-adding-members)
+5. [Assigning Directory Roles](#assigning-directory-roles)
+6. [Multi-Factor Authentication](#multi-factor-authentication)
+7. [Password Reset](#password-reset)
+8. [Revoke User Sessions](#revoke-user-sessions)
+9. [Delete and Restore a User](#delete-and-restore-a-user)
 
 ---
 
@@ -20,8 +22,6 @@ Azure-based Microsoft Entra ID lab covering cloud user and group management, dir
 
 - Microsoft Azure
 - Microsoft Entra ID
-- Microsoft 365 Admin Center
-- PowerShell
 
 ---
 
@@ -49,6 +49,16 @@ Cloud-only users were created directly in the Entra ID portal without the need f
 - Cloud-only test users were created in Microsoft Entra ID to simulate managing identities in a modern cloud environment.
 
 ![Entra Users](images/entra-users.png)
+
+---
+
+## Bulk User Creation
+
+Multiple users can be created at once in Entra ID using a CSV file upload, which is useful for onboarding large numbers of employees efficiently.
+
+- Multiple users were created simultaneously using the bulk create feature in Microsoft Entra ID by uploading a formatted CSV file.
+
+![Bulk Users](images/entra-bulk-users.png)
 
 ---
 
@@ -86,23 +96,35 @@ MFA adds a second layer of verification beyond a password, reducing the risk of 
 
 ---
 
-## Conditional Access Policies
+## Password Reset
 
-Conditional Access policies define rules that control how and when users can access cloud resources based on conditions like location, device, or user risk.
+Administrators can reset a user's password directly from the Entra ID portal, generating a temporary password that the user must change on next login.
 
-- A Conditional Access policy was created to enforce MFA for all users when signing into the Azure portal, simulating a common enterprise security requirement.
+- A password reset was performed on a test user account from the Entra ID admin portal, simulating a common help desk request.
 
-![Conditional Access](images/entra-conditional-access.png)
+![Password Reset](images/entra-password-reset.png)
 
 ---
 
-## Microsoft 365 Admin Center
+## Revoke User Sessions
 
-The Microsoft 365 Admin Center is the central hub for managing users, licenses, groups, and settings across all Microsoft cloud services.
+Revoking a user's sessions immediately signs them out of all devices and applications. This is used when an account is compromised or an employee is terminated.
 
-- The Microsoft 365 Admin Center was explored to demonstrate familiarity with the interface used by administrators to manage users, licenses, and settings across Microsoft cloud services.
+- A user's active sessions were revoked in Microsoft Entra ID to simulate an account security response.
 
-![M365 Admin Center](images/m365-admin-center.png)
+![Revoke Sessions](images/entra-revoke-sessions.png)
+
+---
+
+## Delete and Restore a User
+
+Deleted users in Entra ID are kept in a recycle bin for 30 days before being permanently removed. This allows administrators to restore accounts that were accidentally deleted.
+
+- A test user account was deleted and then successfully restored from the Deleted users section in Microsoft Entra ID.
+
+![Deleted User](images/entra-deleted-user.png)
+
+![Restore User](images/entra-restore-user.png)
 
 ---
 
