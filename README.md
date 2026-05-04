@@ -122,9 +122,10 @@ Revoking a user's sessions immediately signs them out of all devices and applica
 
 Deleted users in Entra ID are kept in a recycle bin for 30 days before being permanently removed. This allows administrators to restore accounts that were accidentally deleted.
 
-- A test user account was deleted and then successfully restored from the Deleted users section in Microsoft Entra ID.
-
+- A test user account was deleted 
 ![Deleted User](images/entra-deleted-user.png)
+
+- Then successfully restored from the Deleted users section in Microsoft Entra ID.
 
 ![Restore User](images/entra-restore-user.png)
 
@@ -133,5 +134,13 @@ Deleted users in Entra ID are kept in a recycle bin for 30 days before being per
 ## Challenges and Takeaways
 
 **Challenges:**
+- Bulk user creation requires a very specific CSV format and any formatting errors will cause the upload to fail
+- Discovering that features like Self-Service Password Reset and Conditional Access require a premium Entra ID license, which are commonly used in real enterprise environments
+- Understanding that revoking sessions does not disable the account, the user can still log back in unless the account is also disabled
+- Revoking sessions and disabling an account are two separate actions and both may be needed during an offboarding or security incident
 
 **Takeaways:**
+- Learning that bulk user creation via CSV is a much more efficient approach than creating accounts one by one in large environments
+- The 30 day deleted user retention period exists as a safety net and understanding when and how to use it prevents permanent data loss
+- Getting comfortable switching between the Azure Portal and Entra ID admin center as separate but related tools
+- Group membership in Entra ID directly impacts what resources and applications a user can access, making accurate group management critical
