@@ -60,6 +60,8 @@ Multiple users can be created at once in Entra ID using a CSV file upload, which
 
 ![Bulk Users](images/entra-bulk-users.png)
 
+![Bulk Users](images/Total-Users-After-Bulk-Creation.png)
+
 ---
 
 ## Creating Groups and Adding Members
